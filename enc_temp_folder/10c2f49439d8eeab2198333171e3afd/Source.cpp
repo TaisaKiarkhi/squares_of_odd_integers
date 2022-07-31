@@ -8,7 +8,8 @@ int main() {
 	cout << "This program will calculate the square of the odd numbers from 1 to the user's limit. ";
 	cout << "Enter your limit";
 	cin >> limit;
-
+        
+	//put a limit to the array to avoid problems
 	unsigned odds[1000]{};
 
 	for (size_t i{1}; i < limit; ++i) {
@@ -20,8 +21,6 @@ int main() {
 		unsigned square{ static_cast<unsigned>(pow(odds[i],2)) };
 		cout << "The square of " << odds[i] << " is " << square << endl;
 	}
-
-
 
 	return 0;
 }
